@@ -1,0 +1,13 @@
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\TelegramBot.exe
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\TelegramBot.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\TelegramBot.deps.json
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\TelegramBot.runtimeconfig.json
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\TelegramBot.pdb
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.Bson.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\redmine-net-api.dll
+D:\Projects\c#\TgBot\TelegramBot(core)\TelegramBot\obj\Release\netcoreapp3.1\PubTmp\Out\Telegram.Bot.dll
