@@ -2,7 +2,7 @@
 {
     public static class AppSettings
     {
-        public static string Url { get; set; } = "https://fuckingadviserbot.azurewebsites.net:443/{0}";
+        public static string Url { get; set; } = "http://www.arzanis.me/{0}";
 
         public static string Name { get; set; } = "FuckingAdviserBot";
 
