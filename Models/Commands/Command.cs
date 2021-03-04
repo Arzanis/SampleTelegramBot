@@ -12,7 +12,7 @@ namespace TelegramBot.Models.Commands
 
         public bool Contains(string command)
         {
-            return command.Contains(Name) && command.Contains(AppSettings.Name);
+            return command.Contains(Name) && command.Contains(AppSettings.BotName);
         }
     }
 }

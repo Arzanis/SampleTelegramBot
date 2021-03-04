@@ -2,18 +2,16 @@
 {
     public static class AppSettings
     {
-        public static string Url { get; set; } = "";
+        public static string AppUrl { get; set; } = "https://arzanis.me/{0}";
 
-        public static string Name { get; set; } = "FuckingAdviserBot";
+        public static string BotName { get; set; } = "FuckingAdviserBot";
+        public static string TgApiKey { get; set; } = "1339776940:AAEDCw--99Y-GVxeGADagGj5bdZGWq9-FMY";
+        public static bool DebugFlag { get; set; } = true;
 
-        public static string Key { get; set; } = "";
+        public static int DebugChatId { get; set; } = -590873509;
 
-        public static bool DebugFlag { get; set; } = false;
+        public static string RmUrl { get; set; } = "https://redmine.permenergosbyt.ru/";
 
-        public static int DebugChat { get; set; } = ;
-
-        public static string RMUrl { get; set; } = "";
-
-        public static string RMApiKey { get; set; } = "";
+        public static string RmApiKey { get; set; } = "150c2364b49eea8cfb1cd64b81033fcf4bcf5551";
     }
 }

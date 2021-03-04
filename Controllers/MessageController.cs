@@ -20,7 +20,7 @@ namespace TelegramBot.Controllers
                 Message message = update.Message;
                 if (message.Sticker != null) return Ok();
 
-                if (AppSettings.DebugFlag && message.Chat.Id != AppSettings.DebugChat)
+                if (AppSettings.DebugFlag && message.Chat.Id != AppSettings.DebugChatId)
                 {
                     Task.Run(() => commands[0].Execute(message, client));
                     return Ok();

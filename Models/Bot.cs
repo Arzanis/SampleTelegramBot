@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using TelegramBot.Models.Commands;
 using Telegram.Bot.Types.Enums;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace TelegramBot.Models
 {
@@ -10,12 +12,11 @@ namespace TelegramBot.Models
     {
         private static TelegramBotClient client;
         private static List<Command> commandsList;
-
         public static IReadOnlyList<Command> Commands => commandsList.AsReadOnly();
 
         public static async Task<TelegramBotClient> Get()
         {
-            string hook = string.Format(AppSettings.Url, "api/message/update");
+            string hook = string.Format(AppSettings.AppUrl, "api/message/update");
 
             if (client != null)
             {
@@ -30,7 +31,7 @@ namespace TelegramBot.Models
             commandsList.Add(new Dice());
             commandsList.Add(new RedmineCommand());
 
-            client = new TelegramBotClient(AppSettings.Key);
+            client = new TelegramBotClient(AppSettings.TgApiKey);
 
             await client.SetWebhookAsync(hook, allowedUpdates: new List<UpdateType> { UpdateType.Message, UpdateType.InlineQuery });
 
