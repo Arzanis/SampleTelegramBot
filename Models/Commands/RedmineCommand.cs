@@ -8,6 +8,8 @@ using Redmine.Net.Api.Types;
 using static System.String;
 using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using static TelegramBot.Startup;
 
 namespace TelegramBot.Models.Commands
 {
@@ -37,8 +39,8 @@ namespace TelegramBot.Models.Commands
 
             try
             {
-                string host = AppSettings.RmUrl;
-                string apiKey = AppSettings.RmApiKey;
+                string host = Configuration.GetSection("RmSettings").GetValue<string>("Url");
+                string apiKey = Configuration.GetSection("RmSettings").GetValue<string>("ApiKey");
 
                 Dictionary<int, string> userMap = GetUserDict();
                 string rmUserId = userMap.ContainsKey(userId) ? userMap[userId] : Empty;
