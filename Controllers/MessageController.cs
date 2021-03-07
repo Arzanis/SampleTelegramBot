@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using static TelegramBot.Startup;
 using System.Threading.Tasks;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
@@ -20,11 +22,14 @@ namespace TelegramBot.Controllers
                 Message message = update.Message;
                 if (message.Sticker != null) return Ok();
 
-                if (AppSettings.DebugFlag && message.Chat.Id != AppSettings.DebugChat)
+#if DEBUG
+                int debugChat = Configuration.GetSection("TgSettings").GetValue<int>("DebugChatId");
+                if (message.Chat.Id != debugChat)
                 {
                     Task.Run(() => commands[0].Execute(message, client));
                     return Ok();
                 }
+#endif
 
                 foreach (var command in commands)
                 {

@@ -8,6 +8,8 @@ using Redmine.Net.Api.Types;
 using static System.String;
 using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using static TelegramBot.Startup;
 
 namespace TelegramBot.Models.Commands
 {
@@ -17,10 +19,10 @@ namespace TelegramBot.Models.Commands
         {
             Dictionary<int, string> userDict = new Dictionary<int, string>
             {
-               /* { 437852020, "6275" }, //Gladkih
+                { 437852020, "6275" }, //Gladkih
                 { 127019690, "6087" }, //Tihonin
                 { 269068668, "6557" }, //Yasnikov
-                { 138808788, "5729" } //Negashev*/
+                { 138808788, "5729" } //Negashev
             };
 
             return userDict;
@@ -37,8 +39,8 @@ namespace TelegramBot.Models.Commands
 
             try
             {
-                string host = AppSettings.RMUrl;
-                string apiKey = AppSettings.RMApiKey;
+                string host = Configuration.GetSection("RmSettings").GetValue<string>("Url");
+                string apiKey = Configuration.GetSection("RmSettings").GetValue<string>("ApiKey");
 
                 Dictionary<int, string> userMap = GetUserDict();
                 string rmUserId = userMap.ContainsKey(userId) ? userMap[userId] : Empty;
@@ -87,6 +89,7 @@ namespace TelegramBot.Models.Commands
                         parameters.Add(RedmineKeys.STATUS, "o");
 
                         List<Issue> issues = manager.GetObjects<Issue>(parameters);
+
 
                         foreach (var issue in issues)
                         {
