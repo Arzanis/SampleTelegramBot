@@ -7,7 +7,7 @@ namespace TelegramBot
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; private set; }
+        public static IConfiguration Configuration { get; private set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
