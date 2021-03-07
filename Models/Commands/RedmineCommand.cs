@@ -19,10 +19,7 @@ namespace TelegramBot.Models.Commands
         {
             Dictionary<int, string> userDict = new Dictionary<int, string>
             {
-                { 437852020, "6275" }, //Gladkih
-                { 127019690, "6087" }, //Tihonin
-                { 269068668, "6557" }, //Yasnikov
-                { 138808788, "5729" } //Negashev
+                //temp user add. Work with DB coming
             };
 
             return userDict;
