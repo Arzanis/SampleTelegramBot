@@ -22,7 +22,8 @@ namespace TelegramBot.Models.Commands
                 { 437852020, "6275" }, //Gladkih
                 { 127019690, "6087" }, //Tihonin
                 { 269068668, "6557" }, //Yasnikov
-                { 138808788, "5729" } //Negashev
+                { 138808788, "5729" }, //Negashev
+                { 297102082, "6591" }  //Aleshin
             };
 
             return userDict;
