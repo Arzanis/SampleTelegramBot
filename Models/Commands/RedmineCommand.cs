@@ -72,6 +72,7 @@ namespace TelegramBot.Models.Commands
                                 {
                                     string formattedId = Format("<u><a href= \"{0}issues/{1}/\" >{1,6}</a></u>", host, issue.Id.ToString());
                                     string formattedDescr = issue.Description.Substring(0, issue.Description.Length > 4000 ? 4000 : issue.Description.Length);
+                                    formattedDescr = formattedDescr.Replace("<", "&lt;").Replace(">", "&gt;");
 
                                     answer = Concat(answer, Format("{0}\n{1}", formattedId, formattedDescr));
                                 }
