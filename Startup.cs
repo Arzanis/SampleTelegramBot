@@ -19,6 +19,7 @@ namespace TelegramBot
         {
             services.AddMvc(options => options.EnableEndpointRouting = false).AddNewtonsoftJson();
             Bot.Get().Wait();
+            SqlService.InitConnection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

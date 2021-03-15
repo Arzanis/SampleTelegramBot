@@ -1,6 +1,5 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
-using System;
 using System.Threading.Tasks;
 using static System.String;
 
